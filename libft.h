@@ -6,7 +6,7 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 00:51:53 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/17 22:51:39 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/22 19:24:48 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include   <unistd.h>
 # include   <stdlib.h>
 # include   <string.h>
+# include   <errno.h>
+# include   <fcntl.h>
 
 int     ft_isalnum(int  str);
 int     ft_isalpha(int  str);
@@ -35,6 +37,10 @@ void    *ft_memmove(void    *dst, const void    *src, size_t n);
 void    *ft_memchr(const    void *ptr, int  c, size_t n);
 void    ft_bzero(void   *src, size_t n);
 void    *ft_calloc(size_t  n, size_t   s);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 size_t	ft_strlen(const	char *str);
 size_t  ft_strlcpy(char *dst, const char *src, size_t n);
@@ -44,6 +50,8 @@ size_t  ft_strlcat(char *dst, const char *src, size_t   s);
 char    *ft_strchr(const char   *str, int c);
 char    *ft_strrchr(const char  *str, int   c);
 char    *ft_strnstr(const char *dst, const char *src, size_t n);
+char    *ft_strdup(const    char *s1);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 
 #endif

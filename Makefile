@@ -6,7 +6,7 @@
 #    By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 12:53:37 by mupolat           #+#    #+#              #
-#    Updated: 2022/12/17 22:52:07 by mupolat          ###   ########.fr        #
+#    Updated: 2022/12/22 19:25:34 by mupolat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,13 @@ SRCS			= ft_isdigit.c \
 					ft_strncmp.c \
 					ft_strnstr.c \
 					ft_atoi.c  \
-					ft_calloc.c
+					ft_calloc.c \
+					ft_strdup.c \
+					ft_putchar_fd.c \
+					ft_putstr_fd.c \
+					ft_putendl_fd.c \
+					ft_putnbr_fd.c \
+					ft_substr.c
 
 OBJS			= $(SRCS:%.c=%.o)
 

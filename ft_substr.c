@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 14:22:31 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/22 12:18:27 by mupolat          ###   ########.fr       */
+/*   Created: 2022/12/22 17:02:59 by mupolat           #+#    #+#             */
+/*   Updated: 2022/12/22 19:26:27 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-size_t  ft_strlcpy(char *dst, const char *src, size_t n)
-{
+char    *ft_substr(char const *s, unsigned int start, size_t len)
+{   
     size_t  i;
+    size_t  j;
+    char *str;
 
+    str = ((char *)malloc(sizeof(*s) * (len  + 1)));
+    if (!str)
+        return (0);
     i = 0;
-    if(n > 0)
+    j = 0;
+    while (s[i])
     {
-        while (src[i] && i < n - 1)
+        if (i >= start && j < len)
         {
-            dst[i] = src[i];
-            i++;
+            str[j] = s[i];
+            j++;
         }
-        dst[i] = '\0';
+        i++;
     }
-    return((size_t)ft_strlen(src));
+    str[j] = 0;
+    return (str);
 }
-
-int    main(void)
+/*
+int main()
 {
-    char dst[] = "mucahtf8rfer";
-    char src[] = "dddbbg";
-    size_t size = 20;
-    size_t sonuc;
-    sonuc = ft_strlcpy(dst, src, size);
-    printf("Değer: %zu", sonuc);
-}
+    char a[] = "mucahit";
+
+    printf ("%s\n", ft_substr(a, 2, 1));
+}*/

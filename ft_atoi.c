@@ -6,7 +6,7 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 15:38:12 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/17 16:01:45 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/21 20:54:07 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,13 @@ int ft_atoi(const   char    *str)
         str++;
     }
     if (k == - 1)
-        j = - j;
+        j *= -1;
     return (j);
 }
+/*
+int main()
+{
+    char b[] = "          +36ıstanbul";
+
+    printf("%d", ft_atoi(b));
+}*/

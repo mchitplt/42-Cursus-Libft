@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 00:54:58 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/19 18:15:41 by mupolat          ###   ########.fr       */
+/*   Created: 2022/12/20 17:25:38 by mupolat           #+#    #+#             */
+/*   Updated: 2022/12/20 18:00:26 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-char    *ft_strrchr(const   char    *str, int   c)
+void ft_putnbr_fd(int n, int fd)
 {
-    int i;
-
-    i = ft_strlen(str);
-    if ((unsigned   char)c == '\0')
-        return ((char *)str + i);
-    while (i >= 0)
+    if (n == -2147483648)
+        write (fd, "-2147483648", 11);
+    else if (n < 0)
     {
-        if(*((char *)str + i) == (unsigned   char)c)
-            return ((char *)str + i);
-        i--;
+        write (fd, "-", 1);
+        ft_putnbr_fd(-n, fd);
     }
-    return (0);
+    else if (n > 9)
+    {
+        ft_putnbr_fd((n / 10), fd);
+        ft_putnbr_fd((n % 10), fd);
+    }
+    else
+    {
+        char a;
+        a = '0';
+        n = a + n;
+        write (fd, &n, 1);
+    }
+
 }
-/*
-int main(void)
-{
-    char    cumle[] = "mucahit polat 2001";
-    printf("%s", ft_strrchr(cumle,'p'));
-}*/

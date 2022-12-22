@@ -6,7 +6,7 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:01:43 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/17 14:03:36 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/22 11:10:15 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ size_t  ft_strlcat(char *dst, const char *src, size_t   s)
         i = s;
         return (s + j);
     }
+    
     if (j < s - i)
     {
         ft_memcpy(dst + i, src, j);
@@ -42,7 +43,5 @@ int main()
 {
     char    dst[] = "mucahit";
     char    src[] = "sinem";
-    size_t  s = 12;
-    printf("%d", ft_strlcat(dst,src,s));
-
+    printf("%zu", ft_strlcat(dst,src,3));
 }*/
