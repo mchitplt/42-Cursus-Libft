@@ -6,7 +6,7 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 00:51:53 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/22 19:24:48 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/24 20:26:54 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char    *ft_strrchr(const char  *str, int   c);
 char    *ft_strnstr(const char *dst, const char *src, size_t n);
 char    *ft_strdup(const    char *s1);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_itoa(int n);
 
 
 #endif

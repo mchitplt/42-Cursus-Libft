@@ -6,7 +6,7 @@
 #    By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 12:53:37 by mupolat           #+#    #+#              #
-#    Updated: 2022/12/22 19:25:34 by mupolat          ###   ########.fr        #
+#    Updated: 2022/12/24 20:27:06 by mupolat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,9 @@ SRCS			= ft_isdigit.c \
 					ft_putstr_fd.c \
 					ft_putendl_fd.c \
 					ft_putnbr_fd.c \
-					ft_substr.c
+					ft_substr.c \
+					ft_strjoin.c \
+					ft_itoa.c
 
 OBJS			= $(SRCS:%.c=%.o)
 

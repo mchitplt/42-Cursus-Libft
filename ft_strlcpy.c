@@ -6,7 +6,7 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:22:31 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/22 12:18:27 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/24 20:29:15 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t n)
     }
     return((size_t)ft_strlen(src));
 }
-
+/*
 int    main(void)
 {
     char dst[] = "mucahtf8rfer";
@@ -37,4 +37,4 @@ int    main(void)
     size_t sonuc;
     sonuc = ft_strlcpy(dst, src, size);
     printf("Değer: %zu", sonuc);
-}
+}*/
