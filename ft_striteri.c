@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 15:32:17 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/27 22:47:11 by mupolat          ###   ########.fr       */
+/*   Created: 2022/12/27 23:24:49 by mupolat           #+#    #+#             */
+/*   Updated: 2022/12/27 23:32:36 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-int ft_toupper(int  c)
+void ft_striteri(char *s, void (*f)(unsigned int,char*))
 {
-    if (c >= 97 && c <= 122)
+    size_t i;
+    if (!s)
+        return ;
+    
+    i = 0;
+    while (i < ft_strlen(s))
     {
-        c -= 32;
+        f(i,&s[i]);
+        i++;
     }
-    return (c);
 }

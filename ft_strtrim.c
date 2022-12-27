@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 15:32:17 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/27 22:47:11 by mupolat          ###   ########.fr       */
+/*   Created: 2022/12/26 15:29:01 by mupolat           #+#    #+#             */
+/*   Updated: 2022/12/27 21:04:20 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-int ft_toupper(int  c)
+char    *ft_strtrim(char const *s1, char const *set)
 {
-    if (c >= 97 && c <= 122)
+    char    *a;
+    int j;
+    
+    if (!s1 || !set)
+        return (NULL);
+    while (*s1 && ft_strchr(set, *s1))
+        s1++;
+    j = ft_strlen(s1);
+    while (j && ft_strchr(set, s1[j]))
     {
-        c -= 32;
+        j--;
     }
-    return (c);
+    a = ft_substr ((char *)s1, 0, j + 1);
+    return (a);
 }
+/*
+int main()
+{
+    char a[] = "abcmucoabc";
+    char b[] = "abc";
+
+    printf("%s", ft_strtrim(a,b));
+}*/

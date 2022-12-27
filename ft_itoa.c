@@ -6,13 +6,13 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 18:51:57 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/25 07:29:39 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/25 08:14:36 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-int     len_size(int n)
+static size_t len_size(int n)
 {
     size_t len;
     len = 0;
