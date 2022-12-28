@@ -6,19 +6,13 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 12:43:38 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/25 07:29:09 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/28 15:12:27 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-void	ft_bzero(void   *src, size_t n)
+void	ft_bzero(void	*src, size_t n)
 {
-    ft_memset(src, '\0', n);  
+	ft_memset (src, '\0', n);
 }
-/*int main()
-{
-    char a[] = "mucahit";
-    ft_bzero(a, 7);
-    printf("%s", a);
-}*/

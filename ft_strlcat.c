@@ -6,42 +6,23 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:01:43 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/22 11:10:15 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/28 18:20:13 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-size_t  ft_strlcat(char *dst, const char *src, size_t   s)
+size_t	ft_strlcat(char *dst, const char *src, size_t	s)
 {
-    size_t  i;
-    size_t  j;
+	size_t	dst_len;
+	size_t	src_len;
 
-    j = ft_strlen(src);
-    if (!s && !dst)
-        return (0);
-    if ((i = ft_strlen(dst)) >= s)
-    {
-        i = s;
-        return (s + j);
-    }
-    
-    if (j < s - i)
-    {
-        ft_memcpy(dst + i, src, j);
-        dst[i + j] = '\0';
-    }
-    else
-    {
-        ft_memcpy(dst + i,src,s - i - 1);
-        dst[s - 1] = '\0';
-    }
-    return (i + j);
+	src_len = ft_strlen(src);
+	if (!dst && !s)
+		return (0);
+	dst_len = ft_strlen(dst);
+	if (dst_len >= s)
+		return (src_len + s);
+	ft_strlcpy((dst + dst_len), src, s - dst_len);
+	return (dst_len + src_len);
 }
-/*
-int main()
-{
-    char    dst[] = "mucahit";
-    char    src[] = "sinem";
-    printf("%zu", ft_strlcat(dst,src,3));
-}*/

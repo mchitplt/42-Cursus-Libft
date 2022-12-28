@@ -6,7 +6,7 @@
 /*   By: mupolat <mupolat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 21:02:30 by mupolat           #+#    #+#             */
-/*   Updated: 2022/12/22 19:27:56 by mupolat          ###   ########.fr       */
+/*   Updated: 2022/12/28 16:12:17 by mupolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ size_t	ft_strlen(const	char *str)
 	}
 	return (i);
 }
-/*
-int main()
-{
-	char	b[] = "mucahit";
-	printf("%zu", ft_strlen(b));
-}
-*/
